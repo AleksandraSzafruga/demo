@@ -14,7 +14,7 @@ public class ExceptionExample {
         String myNick;
         try {
             myNick = exceptionGenerator.nick();
-        } catch (NoNickException e) {
+        } catch (NoNickCheckedException e) {
             e.printStackTrace();
             System.out.println("Problem with nick generator");
             myNick = "this user has no nick";
@@ -32,8 +32,8 @@ public class ExceptionExample {
         //SOLID
         String myNick2;
         try {
-            myNick = exceptionGenerator2.nickWithRuntimeExceptions();
-        } catch (NoNickRuntimeException e) {
+            myNick = exceptionGenerator2.nickWithRuntimeException();
+        } catch (NoNickRuntimeExc e) {
             e.printStackTrace();
             System.out.println("Problem with nick generator 2");
             myNick2 = "this user has no nick 2";
@@ -44,6 +44,20 @@ public class ExceptionExample {
 
         //String nullString = null;
         //nullString.concat(" ma kota");
+
+        System.out.println("with dealer");
+        NickDealer nickDealer = new NickDealer(new ExceptionGenerator());
+        String myNickDealer;
+
+        try {
+            myNickDealer = nickDealer.nickFromDealer();
+        } catch (NoNickCheckedException e) {
+            myNickDealer = "no nick from dealer";
+            System.out.printf("Problem with dealer");
+
+        }
+        System.out.println("Nick from myDealer "+myNickDealer);
+        nickDealer.nick();
 
         System.out.println("here?");
     }
