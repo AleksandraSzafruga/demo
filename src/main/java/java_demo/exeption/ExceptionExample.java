@@ -25,8 +25,25 @@ public class ExceptionExample {
 
         System.out.println("My nick is " + myNick);
 
-        String nullString = null;
-        nullString.concat(" ma kota");
+        System.out.println("Now with runtime exceptions...");
+
+        ExceptionGenerator exceptionGenerator2 = new ExceptionGenerator();
+        //handle [the only right action] or declare [don't do that]
+        //SOLID
+        String myNick2;
+        try {
+            myNick = exceptionGenerator2.nickWithRuntimeExceptions();
+        } catch (NoNickRuntimeException e) {
+            e.printStackTrace();
+            System.out.println("Problem with nick generator 2");
+            myNick2 = "this user has no nick 2";
+        } finally {
+            //finally wykonuje się zawsze nawet przy obsłudze wyjątku
+            // myNick = "finally"; - zawsze podstawi się "finally"
+        }
+
+        //String nullString = null;
+        //nullString.concat(" ma kota");
 
         System.out.println("here?");
     }
