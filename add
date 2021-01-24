@@ -1,0 +1,11 @@
+[33mcommit f3a4824e8adfd92840f8c581cf498281baf4e87d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Aleksandra Szafruga <ola.szafruga@gmail.com>
+Date:   Sat Jan 23 10:55:19 2021 +0100
+
+    [add] - runtime exception example
+
+[33mcommit def20ddd44bfd8bc0a4c205e8ef3f2463c6169bb[m
+Author: Aleksandra Szafruga <ola.szafruga@gmail.com>
+Date:   Sat Jan 23 10:14:37 2021 +0100
+
+    [add] - exception example
