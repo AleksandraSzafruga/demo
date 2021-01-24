@@ -1,4 +1,4 @@
-package java_demo.exeption;
+package java_demo.exception;
 
 import java.util.Random;
 

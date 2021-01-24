@@ -1,6 +1,4 @@
-package java_demo.exeption;
-
-import java.util.Random;
+package java_demo.exception;
 
 public class NoNickRuntimeExc extends RuntimeException{
     public NoNickRuntimeExc() {
